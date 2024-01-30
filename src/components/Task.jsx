@@ -3,7 +3,7 @@ import { Draggable } from 'react-beautiful-dnd';
 
 const Task = ({ task, index }) => {
   return (
-    <Draggable draggableId={task.id.toString()} index={index}>
+    <Draggable draggableId={`task-${task.id}`} index={index}>
       {(provided) => (
         <div
           {...provided.draggableProps}
